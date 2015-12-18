@@ -10,7 +10,7 @@
 		<GUID_UnitTest>d51ff1f6-06b5-498d-a2dd-c56ec96e84c1</GUID_UnitTest>
 	</Variables>
 	
-	<Project Name="${Name}" Language="${Language}" Location="source\main\cpp" Scope="Public" DependsOn="">
+	<Project Name="${Name}" Type="${Lib}" Language="${Language}" Location="source\main\cpp" Scope="Public" DependsOn="">
 		<ProjectFile>
 			<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 				<PropertyGroup Label="Globals">
