@@ -1,4 +1,4 @@
-<Package Name="sdk_win64" DependsOn="${WorkingDir}xcode\pom.base.xml" Group="com.virtuos.sdk">
+<Package Name="sdk_win64" DependsOn="${XCodeDir}pom.hdr.xml" Group="com.virtuos.sdk">
 	<Versions>
 		<Version>1.0.0</Version>
 	</Versions>
@@ -10,15 +10,12 @@
 		<GUID_UnitTest>d51ff1f6-06b5-498d-a2dd-c56ec96e84c1</GUID_UnitTest>
 	</Variables>
 	
-	<Project Name="${Name}" Type="${Lib}" Language="${Language}" Location="source\main\cpp" Scope="Public" DependsOn="">
+	<Project Name="${Name}" Type="${Hdr}" Language="${Language}" Location="source\main\cpp" Scope="Public" DependsOn="">
 		<ProjectFile>
 			<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 				<PropertyGroup Label="Globals">
 					<ProjectGuid>{${GUID_Main}}</ProjectGuid>
 				</PropertyGroup>
-				<ImportGroup Label="TargetDirs">
-					<Import Project="$(SolutionDir)target\${Name}\${Name}.$(Platform).props" Condition="exists('$(SolutionDir)target\${Name}\${Name}.$(Platform).props')" Label="${Name}_TargetDir" />
-				</ImportGroup>
 				<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DevDebug|x64'">
 					<ClCompile>
 						<PreprocessorDefinitions>WIN32;_WIN64;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -59,10 +56,6 @@
 					<Link>
 					</Link>
 				</ItemDefinitionGroup>
-				<ItemGroup>
-				</ItemGroup>
-				<ItemGroup>
-				</ItemGroup>
 			</Project>
 		</ProjectFile>
 	</Project>
